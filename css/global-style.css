@@ -1,0 +1,554 @@
+/************************************************
+Css Table Of Content
+-----------------------
+01. Resset Css
+02. Typogrpahy
+03. Scroll Top CSS
+04. Global Style
+*************************************************/
+@font-face {
+    font-family: 'Futura Bk BT';
+    src: url('../fonts/FuturaBT-Book.eot');
+    src: url('../fonts/FuturaBT-Book.eot#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaBT-Book.woff2') format('woff2'),
+        url('../fonts/FuturaBT-Book.woff') format('woff'),
+        url('../fonts/FuturaBT-Book.ttf') format('truetype'),
+        url('../fonts/FuturaBT-Book.svg#FuturaBT-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Md BT';
+    src: url('../fonts/FuturaBT-Medium.eot');
+    src: url('../fonts/FuturaBT-Medium.eot#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaBT-Medium.woff2') format('woff2'),
+        url('../fonts/FuturaBT-Medium.woff') format('woff'),
+        url('../fonts/FuturaBT-Medium.ttf') format('truetype'),
+        url('../fonts/FuturaBT-Medium.svg#FuturaBT-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Md BT';
+    src: url('../fonts/FuturaBT-Bold.eot');
+    src: url('../fonts/FuturaBT-Bold.eot#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaBT-Bold.woff2') format('woff2'),
+        url('../fonts/FuturaBT-Bold.woff') format('woff'),
+        url('../fonts/FuturaBT-Bold.ttf') format('truetype'),
+        url('../fonts/FuturaBT-Bold.svg#FuturaBT-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+/*--------------01. Start Resset Css------------------*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*:focus{
+    outline: inherit
+}
+
+html {
+  line-height: 1.15; 
+  -webkit-text-size-adjust: 100%;
+}
+main {
+  display: block;
+}
+
+hr {
+  box-sizing: content-box; 
+  height: 0; 
+  overflow: visible;
+}
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    overflow: auto;
+}
+a {
+  background-color: transparent;
+}
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline; 
+  text-decoration: underline dotted; 
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; 
+  font-size: 1em; 
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-bottom: .5rem;
+  margin-left: 0; 
+}
+blockquote {
+  margin: 0 0 1rem;
+}
+dfn {
+  font-style: italic; 
+}
+address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
+}
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):focus {
+  outline: 0;
+}
+button,
+select { 
+  text-transform: none;
+}
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+legend {
+  box-sizing: border-box; 
+  color: inherit; 
+  display: table;
+  max-width: 100%;
+  padding: 0; 
+  white-space: normal;
+}
+progress {
+  vertical-align: baseline;
+}
+textarea {
+  overflow: auto;
+}
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; 
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield; 
+  outline-offset: -2px; 
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; 
+  font: inherit; 
+}
+details {
+  display: block;
+}
+summary {
+  display: list-item;
+}
+template {
+  display: none;
+}
+[hidden] {
+  display: none;
+}
+body, p {
+    padding: 0px;
+    font-size: 22px;
+    line-height: 1.8;
+    color: #acacac;
+    margin: 0px auto;
+    font-family: 'Futura Bk BT';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body,
+html {
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figur,
+a {
+    margin: 0px;
+    font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Futura Md BT';
+    -webkit-font-variant-ligatures: common-ligatures;
+    font-variant-ligatures: common-ligatures;
+}
+img{
+    display: block;
+    max-width: 100%;
+    border-style: none;
+    vertical-align: middle;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+a:hover,
+a:focus,
+input:focus,
+button:focus,
+a:active {
+    text-decoration: none;
+    outline: none;
+    outline-offset: 0px;
+    box-shadow: none;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+input,
+textarea,
+select {
+    border: 1px solid #333;
+    color: #fff;
+    font-size: 17px;
+    padding: 10px 15px;
+    width: 100%;
+    margin: 0 0 20px 0;
+    max-width: 100%;
+    resize: none;
+    height: 50px;
+    background: transparent;
+}
+textarea{
+    height: 120px;
+}
+
+/*------------01. End Resset Css----------------------*/
+
+
+/*--------------------02. Typography------------------*/
+/*-------heading Typogrpahy--------*/
+h1 {
+    font-size: 50px;
+    line-height: 65px;
+}
+h2 {
+    font-size: 40px;
+    line-height: 54px;
+}
+h3 {
+    font-size: 30px;
+    line-height: 42px;
+}
+h4 {
+    font-size: 24px;
+    line-height: 34px;
+}
+h5 {
+    font-size: 18px;
+    line-height: 28px;
+}
+h6 {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+
+/*-------------03. scroll top css-----------*/
+.scroll-top {
+    background: #f43534;
+    border-radius: 3px;
+    bottom: 50px;
+    cursor: pointer;
+    height: 40px;
+    position: fixed;
+    right: 30px;
+    text-align: center;
+    width: 40px;
+    z-index: 9;
+}
+.scroll-top svg {
+    width: 12px;
+    color: #fff;
+    position: relative;
+    top: 3px;
+}
+.not-visible {
+    visibility: hidden;
+    display: none;
+}
+
+
+
+/*-------------04. Global style---------------*/
+/*------font weight-------*/
+.fw-200 {
+    font-weight: 200;
+}.fw-300 {
+    font-weight: 300;
+}.fw-400 {
+    font-weight: 400;
+}.fw-500 {
+    font-weight: 500;
+}.fw-600 {
+    font-weight: 600;
+}.fw-700 {
+    font-weight: 700;
+}.fw-800 {
+    font-weight: 800;
+}.fw-900 {
+    font-weight: 900;
+}
+
+.pos-relative {
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.futura-book{
+    font-family: 'Futura Bk BT';
+}
+.futura-medium{
+    font-family: 'Futura Md BT';
+    font-weight: 500;
+}
+.futura-bold{
+    font-family: 'Futura Md BT';
+    font-weight: bold;
+}
+.roboto{
+    font-family: 'Roboto', sans-serif;
+}
+
+.social-icon li {
+    display: block;
+    margin-bottom: 2px;
+}
+.social-icon li:last-child {
+    margin-bottom: 0;
+}
+.social-icon li a {
+    width: 46px;
+    height: 46px;
+    border-radius: 100%;
+    color: #fff;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+.social-icon li a:hover {
+    background: #f43534;
+}
+.social-icon li a svg{
+    width: 15px;
+}
+.social-icon li.facebook a svg{
+    width: 11px;
+}
+
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+} 
+
+@media (min-width: 576px){
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px){
+    .container{
+        max-width: 720px;
+    } 
+}
+
+@media (min-width: 992px){
+    .container{
+        max-width: 960px;
+    } 
+}
+
+@media (min-width: 1200px){
+    .container{
+        max-width: 1140px;
+    } 
+}
+
+@media (min-width: 1400px){
+    .container{
+        max-width: 1280px;
+    } 
+}
+
+
+
+.transition-3ms,
+a {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.transition-5ms {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+
+.link-default{
+    display: inline-block;
+    color: #fff;
+    font-family: 'Futura Md BT';
+    font-weight: 500;
+    margin-top: 37px;
+}
+.link-default span{
+    height: 53px;
+    width: 53px;
+    background: #f43534;
+    border-radius: 100%;
+    display: inline-flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+}
+.link-default:hover span{
+    animation: button_pulse 1.5s infinite cubic-bezier(.25, 0, 0, 1);
+}
+
+@-webkit-keyframes button_pulse {
+    0% {
+        box-shadow: 0 0 0 0px rgba(244, 53, 52, 1);
+    }
+    100% {
+        box-shadow: 0 0 0 20px rgba(244, 53, 52, 0);
+    }
+}
+@keyframes button_pulse {
+    0% {
+        box-shadow: 0 0 0 0px rgba(244, 53, 52, 1);
+    }
+    100% {
+        box-shadow: 0 0 0 20px rgba(244, 53, 52, 0);
+    }
+}
+
+.btn-default,
+input[type="button"],
+input[type="submit"],
+button[type="button"],
+button[type="submit"] {
+    border: none;
+    height: 50px;
+    padding: 0 40px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 3px;
+    background: #f43534;
+    font-weight: 500;
+    color: #fff;
+}
+/* --------04. End GLOBAL style css ------**/
+
